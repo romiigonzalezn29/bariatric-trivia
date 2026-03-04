@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ruleta Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+</head>
+<body style="font-family:'Montserrat', sans-serif;">
+    <div class="container">
+      <div style="display:none" class="points-counter">Puntos: <span id="points">0</span></div> 
+       
+        <div class="wheel-container">
+            <img src="assets/clavija.png" class="pointer" alt="Clavija">
+            <canvas id="wheelCanvas" width="1500" height="1500"></canvas>
+            <button class="center-button" id="centerSpinBtn">
+                <img src="./assets/thumbnail-bariatricline.png" alt="Girar">
+            </button>
+        </div>
+        <button style="display:none" class="spin-btn" id="spinBtn">Girar ruleta</button> 
+        <button style="display:none" class="reset-btn" id="resetBtn">Reiniciar juego</button> 
+    </div>
+
+   
+   <!-- Modal de Pregunta -->
+<div class="modal" id="questionModal">
+   <div class="modal-content">
+       <div style="width:100%; display: flex; justify-content: left; margin-bottom: 30px;">
+           <img src="assets/logo-bariatricline.png" style="width:250px;">
+       </div>
+       <h3 style="" id="questionTitle"></h3>
+       <div class="options-container" id="optionsContainer"></div>
+       <img src="assets/scrolling_colors.gif" style="width:100%;height:6px">
+   </div>
+</div>
+
+
+     <!--  Modal de Felicitaciones  -->
+     <div style="display:none" class="modal" id="congratsModal">
+        <div class="modal-content">
+            <h2>¡Correcto!</h2>
+            <p>Has ganado 10 puntos.</p>
+            <button class="modal-btn" id="closeCongratsBtn">Continuar</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
